@@ -8,8 +8,6 @@
 
 curl -sL https://firebase.tools | bash
 
-firebase login
-
-firebase appdistribution:distribute $CI_DEVELOPMENT_SIGNED_APP_PATH/Coffee.ipa --app 1:150620856531:ios:7654e882fed44a1799b426 --release-notes "Test 배포"
+firebase login:ci
 
 exit 0
