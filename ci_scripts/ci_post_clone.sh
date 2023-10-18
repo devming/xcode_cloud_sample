@@ -10,4 +10,8 @@ curl -sL https://firebase.tools | upgrade=true bash
 
 firebase login:ci
 
-echo "${$CI_DEVELOPMENT_SIGNED_APP_PATH/Coffee.ipa}"
+path=$CI_DEVELOPMENT_SIGNED_APP_PATH
+
+echo "${path}"
+
+exit 0
