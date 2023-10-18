@@ -30,6 +30,13 @@
 		AEC146DF28C3F57300F0D1BB /* CoffeeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC146DE28C3F57300F0D1BB /* CoffeeDataStore.swift */; };
 		AEC146E128C3F80C00F0D1BB /* CoffeesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC146E028C3F80C00F0D1BB /* CoffeesView.swift */; };
 		AEC146E428C3F88200F0D1BB /* CoffeeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC146E328C3F88200F0D1BB /* CoffeeRow.swift */; };
+		CAFE6D2C2ADFD78300C78B75 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CAFE6D2B2ADFD78300C78B75 /* GoogleService-Info.plist */; };
+		CAFE6D2F2ADFD8F200C78B75 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = CAFE6D2E2ADFD8F200C78B75 /* FirebaseAnalytics */; };
+		CAFE6D312ADFD8F200C78B75 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = CAFE6D302ADFD8F200C78B75 /* FirebaseAnalyticsOnDeviceConversion */; };
+		CAFE6D332ADFD8F200C78B75 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CAFE6D322ADFD8F200C78B75 /* FirebaseAnalyticsSwift */; };
+		CAFE6D352ADFD8F200C78B75 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = CAFE6D342ADFD8F200C78B75 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		CAFE6D372ADFD8F200C78B75 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CAFE6D362ADFD8F200C78B75 /* FirebaseAuth */; };
+		CAFE6D392ADFD8F200C78B75 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CAFE6D382ADFD8F200C78B75 /* FirebaseRemoteConfigSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +84,10 @@
 		AEC146DE28C3F57300F0D1BB /* CoffeeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeDataStore.swift; sourceTree = "<group>"; };
 		AEC146E028C3F80C00F0D1BB /* CoffeesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeesView.swift; sourceTree = "<group>"; };
 		AEC146E328C3F88200F0D1BB /* CoffeeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeRow.swift; sourceTree = "<group>"; };
+		CAFE6D2B2ADFD78300C78B75 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CAFE6D3A2ADFD93500C78B75 /* ci_post_clone.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_clone.sh; sourceTree = "<group>"; };
+		CAFE6D3B2ADFD94100C78B75 /* ci_pre_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_pre_xcodebuild.sh; sourceTree = "<group>"; };
+		CAFE6D3C2ADFD94900C78B75 /* ci_post_xcodebuild.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = ci_post_xcodebuild.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +95,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAFE6D332ADFD8F200C78B75 /* FirebaseAnalyticsSwift in Frameworks */,
+				CAFE6D372ADFD8F200C78B75 /* FirebaseAuth in Frameworks */,
+				CAFE6D352ADFD8F200C78B75 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				CAFE6D392ADFD8F200C78B75 /* FirebaseRemoteConfigSwift in Frameworks */,
+				CAFE6D2F2ADFD8F200C78B75 /* FirebaseAnalytics in Frameworks */,
+				CAFE6D312ADFD8F200C78B75 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				AE7D553D28CD48430013DD60 /* CoffeeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +136,7 @@
 		AE4E564328C313DE00CBF8BC = {
 			isa = PBXGroup;
 			children = (
+				CAFE6D2A2ADD7EDB00C78B75 /* ci_scripts */,
 				AE4E564E28C313DE00CBF8BC /* Coffee */,
 				AE7D553828CD47850013DD60 /* CoffeeKit */,
 				AE4E566028C313DF00CBF8BC /* CoffeeTests */,
@@ -143,6 +161,7 @@
 		AE4E564E28C313DE00CBF8BC /* Coffee */ = {
 			isa = PBXGroup;
 			children = (
+				CAFE6D2B2ADFD78300C78B75 /* GoogleService-Info.plist */,
 				AEC1056A28C43F49007C1933 /* Info.plist */,
 				AE4E564F28C313DE00CBF8BC /* CoffeeApp.swift */,
 				AE23BD1028C47F7F00392827 /* Localizable.strings */,
@@ -229,6 +248,16 @@
 			path = Coffees;
 			sourceTree = "<group>";
 		};
+		CAFE6D2A2ADD7EDB00C78B75 /* ci_scripts */ = {
+			isa = PBXGroup;
+			children = (
+				CAFE6D3A2ADFD93500C78B75 /* ci_post_clone.sh */,
+				CAFE6D3B2ADFD94100C78B75 /* ci_pre_xcodebuild.sh */,
+				CAFE6D3C2ADFD94900C78B75 /* ci_post_xcodebuild.sh */,
+			);
+			path = ci_scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +276,12 @@
 			name = Coffee;
 			packageProductDependencies = (
 				AE7D553C28CD48430013DD60 /* CoffeeKit */,
+				CAFE6D2E2ADFD8F200C78B75 /* FirebaseAnalytics */,
+				CAFE6D302ADFD8F200C78B75 /* FirebaseAnalyticsOnDeviceConversion */,
+				CAFE6D322ADFD8F200C78B75 /* FirebaseAnalyticsSwift */,
+				CAFE6D342ADFD8F200C78B75 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				CAFE6D362ADFD8F200C78B75 /* FirebaseAuth */,
+				CAFE6D382ADFD8F200C78B75 /* FirebaseRemoteConfigSwift */,
 			);
 			productName = Coffee;
 			productReference = AE4E564C28C313DE00CBF8BC /* DevCoffeeeeeMing.app */;
@@ -323,6 +358,9 @@
 				Base,
 			);
 			mainGroup = AE4E564328C313DE00CBF8BC;
+			packageReferences = (
+				CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = AE4E564D28C313DE00CBF8BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +379,7 @@
 			files = (
 				AE4E565828C313DF00CBF8BC /* Preview Assets.xcassets in Resources */,
 				0ABCCEF8293FEA26004441B3 /* LaunchScreen.storyboard in Resources */,
+				CAFE6D2C2ADFD78300C78B75 /* GoogleService-Info.plist in Resources */,
 				AE23BD1128C47F7F00392827 /* Localizable.strings in Resources */,
 				AE4E565428C313DF00CBF8BC /* Assets.xcassets in Resources */,
 			);
@@ -741,6 +780,17 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.16.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		AE7D553C28CD48430013DD60 /* CoffeeKit */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -749,6 +799,36 @@
 		AE7D554028CD487A0013DD60 /* CoffeeKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = CoffeeKit;
+		};
+		CAFE6D2E2ADFD8F200C78B75 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		CAFE6D302ADFD8F200C78B75 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		CAFE6D322ADFD8F200C78B75 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		CAFE6D342ADFD8F200C78B75 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		CAFE6D362ADFD8F200C78B75 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		CAFE6D382ADFD8F200C78B75 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAFE6D2D2ADFD83100C78B75 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

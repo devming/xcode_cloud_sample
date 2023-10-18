@@ -31,6 +31,16 @@
 /// THE SOFTWARE.
 
 import SwiftUI
+import FirebaseCore
+
+class AppDelegate: NSObject, UIApplicationDelegate {
+  func application(_ application: UIApplication,
+                   didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
+    FirebaseApp.configure()
+
+    return true
+  }
+}
 
 enum Panel: Hashable {
   case coffee
@@ -38,6 +48,7 @@ enum Panel: Hashable {
 
 @main
 struct CoffeeApp: App {
+  @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
   @StateObject private var model = CoffeeViewModel(coffeeDataStore: UserDefaultsCoffeeDataStore())
 
   var body: some Scene {
