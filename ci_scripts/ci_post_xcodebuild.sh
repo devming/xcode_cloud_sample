@@ -8,6 +8,19 @@
 
 echo "Uploading Firebase Debug Build"
 
-./firebase-tools-macos appdistribution:distribute $CI_DEVELOPMENT_SIGNED_APP_PATH/Coffee.ipa --app $FIREBASE_APP_ID --token $FIREBASE_TOKEN --release-notes "Test 배포"
+unzip firebase-tools-macos.zip
+chmod +x ./firebase-tools-macos
+
+echo "==1 "
+ls $CI_DEVELOPMENT_SIGNED_APP_PATH
+echo "==2"
+ls $CI_ARCHIVE_PATH
+echo "==3"
+ls $CI_APP_STORE_SIGNED_APP_PATH
+echo "==4"
+ls $CI_AD_HOC_SIGNED_APP_PATH
+echo "==5"
+
+./firebase-tools-macos appdistribution:distribute $CI_DEVELOPMENT_SIGNED_APP_PATH/Coffee-.ipa --app $FIREBASE_APP_ID --token $FIREBASE_TOKEN --release-notes "Test 배포"
 
 exit 0
